@@ -20,6 +20,7 @@ ReactDOM.render(
 		<Route path="/matrix" component={Category} />
 		<Route path="/social" component={Category} />
 		<Route path="/combat" component={CombatSequence} />
+		<Route path="/spells" component={Category} />
 	</Route>
 	</Router>
 	</div>,

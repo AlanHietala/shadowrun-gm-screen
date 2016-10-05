@@ -1,5 +1,7 @@
 import React from 'react';
 import Data from '../data/Data';
+import spells from '../constants/Spells';
+import Spell from './Spell';
 import * as testTypes from '../constants/TestTypes';
 import OpposedCheck from './OpposedCheck';
 import ThresholdCheck from './ThresholdCheck';
@@ -28,14 +30,22 @@ class Category extends React.Component {
 	render() {
 		const { params } = this.props;
 		const category = this.props.route.path.substring(1);
-		const categoryData = Data[category];
+		const categoryData = category === 'spells' ? spells : Data[category];
 		const categoryChecks = categoryData
 			.filter((item) => {
 				return this.state.searchString === '' || item.name.toLowerCase().indexOf(this.state.searchString.toLowerCase()) > -1
 			})
 			.map((check) => {
-			return check.testType === testTypes.OPPOSED ? <OpposedCheck key={check.name} check={check}/> :
-				<ThresholdCheck key={ check.name } check={check} />
+			if(check.testType === testTypes.OPPOSED) {
+				return <OpposedCheck key={check.name} check={check}/>
+			} else if (check.testType === testTypes.THRESHOLD) {
+					return <ThresholdCheck key={ check.name } check={ check } />
+			} else if (check.spellCategory) {
+				return <Spell key={ check.name } check={ check } />
+			} else {
+				return (<div>unknown category type</div>)
+			}
+
 		});
 
 

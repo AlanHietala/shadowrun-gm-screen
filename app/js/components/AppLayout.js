@@ -16,6 +16,7 @@ function AppLayout({children}) {
 						<li><Link to="/matrix">Matrix</Link></li>
 						<li><Link to="/social">Social</Link></li>
 						<li><Link to="/combat">Combat Sequence</Link></li>
+						<li><Link to="/spells">Spells</Link></li>
 					</ul>
 				</div>
 			</nav>
