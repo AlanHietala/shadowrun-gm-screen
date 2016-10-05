@@ -45,11 +45,6 @@ module.exports = {
 	},
 	devtool: 'source-map',
 	plugins: [
-		new webpack.NoErrorsPlugin(),
-		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-			Tether: "Tether"
-		})
+		new webpack.NoErrorsPlugin()
 	]
 };

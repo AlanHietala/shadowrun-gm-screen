@@ -11,6 +11,12 @@ class Category extends React.Component {
 			searchString: ''
 		};
 		this.search = this.search.bind(this);
+		this.clear = this.clear.bind(this);
+	}
+	clear(event) {
+		this.setState({
+			searchString: ''
+		});
 	}
 
 	search(event) {
@@ -21,24 +27,24 @@ class Category extends React.Component {
 
 	render() {
 		const { params } = this.props;
-		const { category } = params;
+		const category = this.props.route.path.substring(1);
 		const categoryData = Data[category];
 		const categoryChecks = categoryData
 			.filter((item) => {
 				return this.state.searchString === '' || item.name.toLowerCase().indexOf(this.state.searchString.toLowerCase()) > -1
 			})
 			.map((check) => {
-			return check.testType === testTypes.OPPOSED ? <OpposedCheck check={check}/> :
-				<ThresholdCheck check={check} />
+			return check.testType === testTypes.OPPOSED ? <OpposedCheck key={check.name} check={check}/> :
+				<ThresholdCheck key={ check.name } check={check} />
 		});
 
 
 		return (
 			<div>
-				<div className="row"><input className="" onChange={this.search}/>
-					<button className="btn">Clear</button>
+				<div className="row"><input className="" placeholder="Filter" value={ this.state.searchString } onChange={this.search}/>
+					<button className="" onClick={ this.clear }>Clear</button>
 				</div>
-				<div className='row'>{categoryChecks}</div>
+				<div className='category-container'>{categoryChecks}</div>
 			</div>
 		)
 	}

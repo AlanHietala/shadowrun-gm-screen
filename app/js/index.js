@@ -1,9 +1,10 @@
-import bootstrap from 'bootstrap-loader';
+import  '../styles/main.css';
 import AppLayout from  './components/AppLayout';
 import Category from './components/Category';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import CombatSequence from './components/CombatSequence';
+import { Router, Route, IndexRedirect, hashHistory } from 'react-router';
 
 
 
@@ -14,8 +15,11 @@ ReactDOM.render(
 	<div>
 	<Router history={hashHistory}>
 	<Route path="/" component={AppLayout}>
-	<IndexRoute component={Category}/>
-		<Route path=":category" component={Category} />
+		<IndexRedirect to="/meat" />
+		<Route path="/meat" component={Category} />
+		<Route path="/matrix" component={Category} />
+		<Route path="/social" component={Category} />
+		<Route path="/combat" component={CombatSequence} />
 	</Route>
 	</Router>
 	</div>,

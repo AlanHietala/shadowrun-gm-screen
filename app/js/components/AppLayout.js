@@ -8,13 +8,14 @@ function AppLayout({children}) {
 				<div className="container-fluid">
 					<div className="navbar-header">
 						<a className="navbar-brand" onClick={() => {browserHistory.push('/meat')}}>
-							Shadowrun GM Screen
+							Shadowland 2.0
 						</a>
 					</div>
 					<ul className="nav navbar-nav">
 						<li><Link to="/meat">Meat</Link></li>
 						<li><Link to="/matrix">Matrix</Link></li>
 						<li><Link to="/social">Social</Link></li>
+						<li><Link to="/combat">Combat Sequence</Link></li>
 					</ul>
 				</div>
 			</nav>

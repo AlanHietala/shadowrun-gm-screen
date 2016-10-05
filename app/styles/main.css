@@ -1,0 +1,46 @@
+body {
+    font-family: "Courier New";
+    background: #333;
+    color: lawngreen;
+}
+
+input {
+    background:#333;
+    color:lawngreen;
+    border: lawngreen 1px solid;
+    height: 24px;
+}
+
+button {
+    border:double lawngreen 3px;
+    background: #333;
+    color: lawngreen;
+    height:28px;
+}
+
+a {
+    color: lawngreen;
+}
+
+a:visited {
+    color: lawngreen;
+}
+
+.categoryitem {
+    margin: 1em;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    green;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    green;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    green;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    green;
+}
