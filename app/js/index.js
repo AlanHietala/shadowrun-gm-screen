@@ -4,6 +4,8 @@ import Category from './components/Category';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CombatSequence from './components/CombatSequence';
+import Modifiers from './components/Modifiers';
+
 import { Router, Route, IndexRedirect, hashHistory } from 'react-router';
 
 
@@ -16,11 +18,12 @@ ReactDOM.render(
 	<Router history={hashHistory}>
 	<Route path="/" component={AppLayout}>
 		<IndexRedirect to="/meat" />
-		<Route path="/meat" component={Category} />
-		<Route path="/matrix" component={Category} />
-		<Route path="/social" component={Category} />
-		<Route path="/combat" component={CombatSequence} />
-		<Route path="/spells" component={Category} />
+		<Route path="/meat" component={ Category } />
+		<Route path="/matrix" component={ Category } />
+		<Route path="/social" component={ Category } />
+		<Route path="/combat" component={ CombatSequence } />
+		<Route path="/modifiers" component={ Modifiers } />
+		<Route path="/spells" component={ Category } />
 	</Route>
 	</Router>
 	</div>,

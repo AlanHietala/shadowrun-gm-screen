@@ -1,10 +1,8 @@
 import React from 'react';
-import Environmental from './modifiers/Environmental';
 
 export default () => {
 
 	return (<div>
-			<Environmental />
 			<h1>Combat Sequence</h1>
 			<ul>
 				<li>Attack: COMBAT_SKILL + ATTRIBUTE +- MODIFIER [LIMIT]</li>
@@ -18,7 +16,6 @@ export default () => {
 				<li>Grazing: DV + Net Hits = Modified Armor value</li>
 				<li>Stun: DV + Net Hits &lt; Modified Armor value</li>
 				<li>Roll Soak BODY + ARMOR - WEAPON AP</li>
-
 			</ul>
 		</div>);
 }
