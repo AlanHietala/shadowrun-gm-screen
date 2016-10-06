@@ -18,6 +18,30 @@ button {
     height:28px;
 }
 
+table {
+    text-align: center;
+    border: double lawngreen 3px;
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+td,th {
+    padding:0.5em;
+}
+
+th {
+    border-bottom: double lawngreen 3px;
+}
+
+td {
+    border-right: solid lawngreen 1px;
+    border-bottom: solid lawngreen 1px;
+}
+
+td:last-child {
+    border-right: none;
+}
+
 a {
     color: lawngreen;
 }
