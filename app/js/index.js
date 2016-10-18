@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CombatSequence from './components/CombatSequence';
 import Modifiers from './components/Modifiers';
-
+import VehicleSequence from './components/VehicleSequence';
 import { Router, Route, IndexRedirect, hashHistory } from 'react-router';
 
 
@@ -24,6 +24,7 @@ ReactDOM.render(
 		<Route path="/combat" component={ CombatSequence } />
 		<Route path="/modifiers" component={ Modifiers } />
 		<Route path="/spells" component={ Category } />
+		<Route path="/vehicle" component={ VehicleSequence } />
 	</Route>
 	</Router>
 	</div>,

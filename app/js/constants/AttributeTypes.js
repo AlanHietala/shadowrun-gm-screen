@@ -8,6 +8,7 @@ export const CHARISMA = 'CHARISMA';
 export const MAGIC = 'MAGIC';
 export const ESSENCE = 'ESSENCE';
 export const RESONANACE = 'RESONANCE';
+export const REACTION = 'REACTION';
 
 
 

@@ -105,6 +105,73 @@ export default {
 			}
 		}
 	],
+	vehicle: [
+		{
+			name: 'Ground Vehicle Test',
+			testType: testTypes.THRESHOLD,
+			attack: {
+				attribute: attributeTypes.REACTION,
+				skill: skills.PILOT_GROUND_CRAFT,
+				limit: limits.SPEED_OR_HANDLING
+			}
+		},
+		{
+			name: 'Cut off',
+			testType: testTypes.OPPOSED,
+			attack: {
+				attribute: attributeTypes.REACTION,
+				skill: skills.PILOT_GROUND_CRAFT,
+				limit: limits.SPEED_OR_HANDLING
+			},
+			defence: {
+				attribute: attributeTypes.REACTION,
+				skill: skills.PILOT_GROUND_CRAFT,
+				limit: limits.SPEED_OR_HANDLING
+			}
+		},
+		{
+			name: 'Crash',
+			testType: testTypes.THRESHOLD,
+			attack: {
+				attribute: attributeTypes.REACTION,
+				skill: skills.PILOT_GROUND_CRAFT,
+				limit: limits.SPEED_OR_HANDLING
+			},
+			defence: {
+				attribute: attributeTypes.REACTION,
+				skill: skills.PILOT_GROUND_CRAFT,
+				limit: limits.SPEED_OR_HANDLING
+			}
+		},
+		{
+			name: 'Ram',
+			testType: testTypes.OPPOSED,
+			attack: {
+				attribute: attributeTypes.REACTION,
+				skill: skills.PILOT_GROUND_CRAFT,
+				limit: limits.SPEED_OR_HANDLING
+			},
+			defence: {
+				attribute: attributeTypes.REACTION,
+				skill: attributeTypes.INTUITION,
+				limit: limits.SPEED_OR_HANDLING
+			}
+		},
+		{
+			name: 'Passive Gunnery',
+			testType: testTypes.OPPOSED,
+			attack: {
+				attribute: attributeTypes.LOGIC,
+				skill: skills.GUNNERY,
+				limit: limits.ACCURACY
+			},
+			defence: {
+				attribute: attributeTypes.REACTION,
+				skill: attributeTypes.INTUITION,
+				limit: limits.SPEED_OR_HANDLING
+			}
+		}
+	],
 	matrix: [
 		{
 			name: 'Bruteforce',
