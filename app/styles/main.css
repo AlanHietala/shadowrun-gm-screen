@@ -68,3 +68,13 @@ a:visited {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color:    green;
 }
+
+.modifiertoggle {
+    border: solid lawngreen 1px;
+    height: 1rem;
+    width: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+
+}

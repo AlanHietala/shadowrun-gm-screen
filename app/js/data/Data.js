@@ -1,14 +1,21 @@
+import React from 'react';
 import * as attributeTypes from '../constants/AttributeTypes';
 import * as skills from '../constants/Skills';
 import * as hardwareAttributes from '../constants/HardwareAttributes';
 import * as limits from '../constants/Limits';
 import * as testTypes from '../constants/TestTypes';
+import Climbing from '../components/modifiers/Climbing';
+import Environmental from '../components/modifiers/Environmental';
+import Perception from '../components/modifiers/Perception';
+import EscapeArtist from '../components/modifiers/EscapeArtist';
+import EnvironmentalCompensation from '../components/modifiers/EnvironmentalCompensation';
 
 export default {
 	social: [
 		{
 			name: 'Con',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.CON,
@@ -23,6 +30,7 @@ export default {
 		{
 			name: 'Etiquette',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.ETIQUETTE,
@@ -37,6 +45,7 @@ export default {
 		{
 			name: 'Impersonation',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.IMPERSONATION,
@@ -51,6 +60,7 @@ export default {
 		{
 			name: 'Intimidation',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.INTIMIDATION,
@@ -65,6 +75,7 @@ export default {
 		{
 			name: 'Leadership',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.LEADERSHIP,
@@ -79,6 +90,7 @@ export default {
 		{
 			name: 'Negotiation',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.NEGOTIATION,
@@ -93,6 +105,7 @@ export default {
 		{
 			name: 'Performance',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.CHARISMA,
 				skill: skills.PERFORMANCE,
@@ -109,6 +122,7 @@ export default {
 		{
 			name: 'Ground Vehicle Test',
 			testType: testTypes.THRESHOLD,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.REACTION,
 				skill: skills.PILOT_GROUND_CRAFT,
@@ -118,6 +132,7 @@ export default {
 		{
 			name: 'Cut off',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.REACTION,
 				skill: skills.PILOT_GROUND_CRAFT,
@@ -132,6 +147,7 @@ export default {
 		{
 			name: 'Crash',
 			testType: testTypes.THRESHOLD,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.REACTION,
 				skill: skills.PILOT_GROUND_CRAFT,
@@ -146,6 +162,7 @@ export default {
 		{
 			name: 'Ram',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.REACTION,
 				skill: skills.PILOT_GROUND_CRAFT,
@@ -160,6 +177,7 @@ export default {
 		{
 			name: 'Passive Gunnery',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.GUNNERY,
@@ -177,6 +195,7 @@ export default {
 			name: 'Bruteforce',
 			marks: 0,
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.CYBERCOMBAT,
@@ -191,6 +210,7 @@ export default {
 		{
 			name: 'Control Device',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: 'as skill',
 				skill: '',
@@ -206,6 +226,7 @@ export default {
 			name: 'Crack File',
 			marks: 1,
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.HACKING,
@@ -220,6 +241,7 @@ export default {
 		{
 			name: 'Crash Program',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.CYBERCOMBAT,
@@ -235,6 +257,7 @@ export default {
 			name: 'Data Spike',
 			marks: 0,
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.CYBERCOMBAT,
@@ -250,6 +273,7 @@ export default {
 			name: 'Disarm Databomb',
 			marks: 0,
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.INTUITION,
 				skill: skills.SOFTWARE,
@@ -264,6 +288,7 @@ export default {
 		{
 			name: 'Edit File',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.COMPUTER,
@@ -278,6 +303,7 @@ export default {
 		{
 			name: 'Erase Mark',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.COMPUTER,
@@ -292,6 +318,7 @@ export default {
 		{
 			name: 'Erase Matrix Signature',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.RESONANACE,
 				skill: skills.COMPUTER,
@@ -306,6 +333,7 @@ export default {
 		{
 			name: 'Format Device',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.COMPUTER,
@@ -320,6 +348,7 @@ export default {
 		{
 			name: 'Hack on the Fly',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.HACKING,
@@ -334,6 +363,7 @@ export default {
 		{
 			name: 'Hide',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.INTUITION,
 				skill: skills.ELECTRONIC_WARFARE,
@@ -348,6 +378,7 @@ export default {
 		{
 			name: 'Jack Out',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.WILLPOWER,
 				skill: skills.HARDWARE,
@@ -362,6 +393,7 @@ export default {
 		{
 			name: 'Jam Signals',
 			testType: testTypes.THRESHOLD,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.ELECTRONIC_WARFARE,
@@ -371,6 +403,7 @@ export default {
 		{
 			name: 'Jump Into Rigged Device',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.LOGIC,
 				skill: skills.ELECTRONIC_WARFARE,
@@ -385,6 +418,7 @@ export default {
 		{
 			name: 'Matrix Perception',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.INTUITION,
 				skill: skills.COMPUTER,
@@ -401,6 +435,7 @@ export default {
 		{
 			name: 'Perception',
 			testType: testTypes.THRESHOLD,
+			modifierTables: [<Perception />],
 			attack: {
 				attribute: attributeTypes.INTUITION,
 				skill: skills.PERCEPTION,
@@ -410,6 +445,7 @@ export default {
 		{
 			name: 'Stealth',
 			testType: testTypes.OPPOSED,
+			modifierTables: [],
 			attack: {
 				attribute: attributeTypes.AGILITY,
 				skill: skills.SNEAKING,
